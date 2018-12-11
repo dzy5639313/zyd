@@ -1,0 +1,24 @@
+version: '2'
+services:
+  eureka:
+    image: zyd-eureka
+    ports:
+      - 8000:8000
+  config:
+    image: zyd-config
+    ports:
+      - 8001:8001
+    depends_on:
+      - eureka
+  gateway:
+    image: zyd-gateway
+    ports:
+      - 8888:8888
+    depends_on:
+        - eureka
+  api:
+    image: zyd-api
+    ports:
+      - 8080:8080
+    depends_on:
+      - eureka

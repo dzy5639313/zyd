@@ -8,13 +8,13 @@
         <version>1.0.0-SNAPSHOP</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>config</artifactId>
-    <packaging>jar</packaging>
+
+    <artifactId>gateway</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

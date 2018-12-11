@@ -7,11 +7,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/dzy5639313/zyd/    # 配置git仓库的地址
-          search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
-          username: dzy5639313@163.com                                             # git仓库的账号
-          password: dzyang25639313                                            # git仓库的密码
+          uri: https://github.com/dzy5639313/zyd/
+          search-paths: config-repo
+          username: dzy5639313@163.com
+          password: dzyang25639313
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8000/eureka/   # 注册中心eurka地址
+      defaultZone: http://localhost:8000/eureka/

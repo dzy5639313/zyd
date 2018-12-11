@@ -5,11 +5,12 @@ spring:
     name: api
   cloud:
     config:
+      name: zyd-config #配置中心的项目名
+      profile: dev     #环境
+      label: master    #分支
       discovery:
         enabled: true #开启Config服务发现支持
         serviceId: config #指定server端的name,也就是server端spring.application.name的值
-  profiles:
-    active: dev
 eureka:
   client:
     serviceUrl:

@@ -1,5 +1,8 @@
 package com.zyd.api.web;
 
+import com.zyd.api.common.ApiResult;
+import com.zyd.api.common.Results;
+import com.zyd.api.config.SysConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,10 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class IndexController {
-    @Value("${zyd.hello}")
-    private String hello;
+
     @RequestMapping(value = "hello")
-    public String hello(){
-        return hello;
+    public ApiResult<String> hello(){
+        return Results.success(SysConfig.hello);
     }
 }

@@ -49,6 +49,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>zyd-gateway</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
